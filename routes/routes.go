@@ -11,6 +11,7 @@ func New() *echo.Echo {
 
 	eRegister := e.Group("registration")
 	eRegister.POST("/registration_step_one", controllers.RegistrationStepOne)
+	eRegister.GET("/email_verification", controllers.RegistrationStepTwo)
 
 	return e
 }
